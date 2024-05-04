@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Elif Butik</title>
+    <link rel="website icon" type="png"
+        href="https://png.pngtree.com/png-clipart/20200523/ourmid/pngtree-abstract-fashion-woman-fashion-illustration-black-lines-png-image_2211160.jpg">
+</head>
+<style>
+    :root {
+        --fs-28: 28px;
+        --fs-24: 24px;
+        --fs-18: 18px;
+        --fs-15: 15px;
+        --fs-14: 14px;
+
+        --fw-5: 500;
+        --fw-6: 600;
+        --fw-7: 700;
+
+
+        --px: 60px;
+        --radius: 5px;
+    }
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    button {
+        border: none;
+        background: none;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    ion-icon,
+    span {
+        display: inline-block;
+    }
+
+    label,
+    img {
+        display: block;
+    }
+
+    input {
+        font: inherit;
+        width: 100;
+        border: none;
+    }
+
+    input:focus {
+        outline: 2px solid white;
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        appearance: none;
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: hsl(0, 0%, 80%);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: hsl(0, 0%, 70%);
+    }
+</style>
+
+<body>
+
+    <section id="header">
+        <a href="#" class="logo">
+            Magic Cabinet<span>.</span></a>
+
+        <!-- <a href="#"><img src="https://caradiamond.com/img/cara%20black%20logo.png" class="logo" alt=""></a> -->
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-x fa-bounce fa-xs" style="color: #000000;"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ff80ca;"></i></a>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="cart-header">
+        <h2>#Cart</h2>
+        <p>Thank You For Choosing Us :) </p>
+    </section>
+
+    <main class="container">
+        <h1 class="heading">
+            <ion-icon name="cart-outline"></ion-icon>Shopping Cart
+        </h1>
+
+        <div class="item-flex">
+            <section class="checkout">
+                <h2 class="section-heading">Payment Details</h2>
+
+                <div class="payment-form">
+                    <div class="payment-method">
+                        <button class="method selected">
+                            <ion-icon name="card"></ion-icon>
+                            <span>Credit Card</span>
+                            <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+                        </button>
+
+                        <button class="method">
+                            <ion-icon name="logo-paypal"></ion-icon>
+                            <span>Paypal</span>
+                            <ion-icon class="checkmark" name="checkmark-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+
+                    <form action="#">
+                        <div class="cardholder-name">
+                            <label for="cardholder-name" class="label-default">Cardholder Name</label>
+                            <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+                        </div>
+
+                        <div class="card-number">
+                            <label for="card-number" class="label-default">Card Number</label>
+                            <input type="number" name="card-number" id="card-number" class="input-default">
+                        </div>
+
+                        <div class="input-flex">
+                            <div class="expire-date">
+                                <label for="expire-date" class="label-default">Expiration Date</label>
+
+                                <div class="input-flex">
+                                    <input type="number" name="day" id="expire-date" placeholder="31" min="31" max="31"
+                                        class="input-default">
+                                    /
+                                    <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12"
+                                        class="input-default">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="cvv">
+                                <label for="cvv" class="label-default">CVV</label>
+                                <input type="number" name="cvv" id="cvv" class="input-default">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <button class="btn btn-primary">
+                    <b>Pay</b> $ <span id="payAmount">2.15</span>
+                </button>
+            </section>
+
+            <section class="cart">
+                <div class="cart-item-box">
+                    <h2 class="section-heading">Order Summery</h2>
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="https://cdn-images.kooding.com/productDetailImage/450632-2/c7342aceb7b9aef9c088c341a8fa0c20965a7425.jpg"
+                                    alt="" width="50px">
+                            </div>
+
+                            <div class="detail">
+                                <h4 class="product-name">DABAGIRL Ends Tweed Dress</h4>
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outlline"></ion-icon>
+                                        </button>
+
+                                        <span id="quantity">1</span>
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="price">
+                                        $ <span id="price">100</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="https://cdn-images.kooding.com/productDetailImage/490536-2/bbc5f77422a5f751dc511f2c8111bcba997d3199.jpeg"
+                                    alt="" width="50px">
+                            </div>
+
+                            <div class="detail">
+                                <h4 class="product-name">Iwell Bustier Shirt Set</h4>
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outlline"></ion-icon>
+                                        </button>
+
+                                        <span id="quantity">1</span>
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="price">
+                                        $ <span id="price">85.69</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="https://cdn-images.kooding.com/productDetailImage/515910-2/2f6f3ef01c5e3891ed93f4f231532cf50a6cf264.jpeg"
+                                    alt="" width="50px">
+                            </div>
+
+                            <div class="detail">
+                                <h4 class="product-name">Esther Flower Ribbon Chiffon Blouse</h4>
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outlline"></ion-icon>
+                                        </button>
+
+                                        <span id="quantity">1</span>
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="price">
+                                        $ <span id="price">95.89</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="discount-token">
+                        <label for="token" class="label-default">Gift card / Discount code</label>
+                        <div class="wrapper-flex">
+                            <input type="text" name="discount-token" id="discount-token" class="input-default">
+                            <button class="btn btn-outline">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="subtotal">
+                            <span>Subtotal</span> <span>$ <span id="subtotal">2.05</span>
+                        </div>
+
+                        <div class="tax">
+                            <span>Tax</span> <span>$ <span id="tax">0.10</span>
+                        </div>
+
+                        <div class="shipping">
+                            <span>Shipping</span> <span>$ <span id="shipping">0.00</span>
+                        </div>
+
+                        <div class="total">
+                            <span>Total</span> <span>$ <span id="total">2.15</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+    </main>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail ıpdates about our latest shop and <span>special offers.</span> </p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone: </strong> +90 555 222 333 44 55 / (+01) 2222 365</p>
+            <p><strong>Hours: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us </a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="https://seeklogo.com/images/A/app-store-google-play-logo-4A2747BF5E-seeklogo.com.png" alt=""
+                    width="75%" height="45%">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="https://www.sentrodil.com/wp-content/uploads/2022/03/odeme.png" alt="" width="55%" height="30%">
+        </div>
+        <div class="copyright">
+            <p>2024, Tech2 etc - HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+
+    <script src=" script.js">
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
